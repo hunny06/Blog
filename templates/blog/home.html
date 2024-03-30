@@ -1,0 +1,24 @@
+{% extends 'base/base.html'%}
+
+{% block title %}Home {% endblock%}
+
+
+{% block body %}
+
+<div class="col-sm-8">
+    <h3 class ="text-black my-5">Blogs</h3>
+    {% for blog in blogs %}
+    <ul>
+        <li>
+            <div class="form-group">
+                {{ blog.title }}
+            </div>
+            <div class="form-group">
+                {{ blog.blog }}
+            </div>
+        </li>
+        </ul>
+    {% endfor%}
+</div>
+   
+{% endblock %}
